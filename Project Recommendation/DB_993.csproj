@@ -1,0 +1,202 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\**" />
+    <Compile Remove="Photo\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <EmbeddedResource Remove="Photo\**" />
+    <None Remove="Data\**" />
+    <None Remove="Photo\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resourse\BlackListLocal.en.Designer.cs">
+      <DependentUpon>BlackListLocal.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resourse\BlackListLocal.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BlackListLocal.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resourse\FavoriteLocal.en.Designer.cs">
+      <DependentUpon>FavoriteLocal.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resourse\FavoriteLocal.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FavoriteLocal.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resourse\MainWindowLocal.en.Designer.cs">
+      <DependentUpon>MainWindowLocal.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resourse\MainWindowLocal.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MainWindowLocal.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resourse\MarkWindowLocal.en.Designer.cs">
+      <DependentUpon>MarkWindowLocal.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resourse\MarkWindowLocal.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MarkWindowLocal.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resourse\OpenWindowLocal.en.Designer.cs">
+      <DependentUpon>OpenWindowLocal.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resourse\OpenWindowLocal.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>OpenWindowLocal.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resourse\Profile - Копировать.Designer.cs">
+      <DependentUpon>Profile - Копировать.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resourse\ProfileLocal.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ProfileLocal.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resourse\RegistrationWindowLocal.en.Designer.cs">
+      <DependentUpon>RegistrationWindowLocal.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resourse\RegistrationWindowLocal.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RegistrationWindowLocal.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resourse\TestFirstWindowLocal.en.Designer.cs">
+      <DependentUpon>TestFirstWindowLocal.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resourse\TestFirstWindowLocal.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TestFirstWindowLocal.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resourse\TestSecondWindowLocal.en.Designer.cs">
+      <DependentUpon>TestSecondWindowLocal.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resourse\TestSecondWindowLocal.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TestSecondWindowLocal.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\BlackListLocal.en.resx">
+      <LastGenOutput>BlackListLocal.en.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\BlackListLocal.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BlackListLocal.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\FavoriteLocal.en.resx">
+      <LastGenOutput>FavoriteLocal.en.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\FavoriteLocal.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FavoriteLocal.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\MainWindowLocal.en.resx">
+      <LastGenOutput>MainWindowLocal.en.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\MainWindowLocal.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainWindowLocal.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\MarkWindowLocal.en.resx">
+      <LastGenOutput>MarkWindowLocal.en.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\MarkWindowLocal.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MarkWindowLocal.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\OpenWindowLocal.en.resx">
+      <LastGenOutput>OpenWindowLocal.en.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\OpenWindowLocal.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OpenWindowLocal.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\Profile - Копировать.resx">
+      <LastGenOutput>Profile - Копировать.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\ProfileLocal.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProfileLocal.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\RegistrationWindowLocal.en.resx">
+      <LastGenOutput>RegistrationWindowLocal.en.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\RegistrationWindowLocal.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RegistrationWindowLocal.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\TestFirstWindowLocal.en.resx">
+      <LastGenOutput>TestFirstWindowLocal.en.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\TestFirstWindowLocal.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TestFirstWindowLocal.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\TestSecondWindowLocal.en.resx">
+      <LastGenOutput>TestSecondWindowLocal.en.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resourse\TestSecondWindowLocal.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TestSecondWindowLocal.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
